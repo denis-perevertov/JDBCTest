@@ -1,6 +1,6 @@
 import entity.Product;
+import org.apache.logging.log4j.core.config.Order;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import util.Util;
@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserServiceTest {
+public class ServiceTest {
 
     static Connection connection;
     static Util util;
@@ -27,7 +27,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @SuppressWarnings("errors")
     public void SQLExceptionTest() {
         assertThrows(SQLException.class, () -> {
            String sql = "INSERT dsfjskd 29 2 oj ";
